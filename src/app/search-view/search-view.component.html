@@ -1,0 +1,30 @@
+<div class="container .d-inline mb-10">
+    <form  (ngSubmit)="onSubmit(f)" #f="ngForm" class="row">
+      <label class="sr-only" for="namesearch">Name Search</label>
+                  <input type="text" 
+                          id="namesearch" 
+                          name="namesearch"
+                          class="col-md-10 ml-4 border border-primary"
+                          ngModel
+                          placeholder="Enter BookName For Search">
+                  <button class="btn btn-primary ">Search</button>        
+      </form>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-md-3 ml border border-primary" *ngFor="let book of books">
+      <p *ngIf="book.author">By {{book.author[0]}}</p>
+      <p *ngIf="!book.author">By Unknown</p>      
+        <i class="fa fa-heart" style="font-size:24px;color:red" (click)="removeFav(book)" *ngIf="book.fav"></i>
+        <i class="fa fa-heart" style="font-size:24px;color:rgb(244, 247, 248)" (click)="addFav(book)" *ngIf="!book.fav"></i>
+          <div>
+          <img [src]=book?.imageUrl>
+          </div>
+          <div>
+            {{book?.title}}
+          </div>
+    
+    </div>
+    
+  </div>
+</div>

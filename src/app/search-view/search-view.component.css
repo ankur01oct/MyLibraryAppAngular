@@ -1,0 +1,15 @@
+img{
+    background-color: lightblue
+}
+.ml{
+    margin-bottom:10px;
+    background-color: lightblue
+}
+
+.mb-10{
+    margin-top:2%;    
+    margin-bottom:2%;
+    padding-bottom:4%;
+    padding-top:4%;
+    background-color: navy;
+}

@@ -1,0 +1,15 @@
+<div class="row bgcolor border border-primary">
+    <div class="col-md-2 col-xs-2" *ngIf=name>
+        <img [src]='imageUrl' class="rounded-circle">
+    </div>
+    <div class="col-md-2 col-xs-2 pd" *ngIf=!name>
+      </div>
+  <div class="col-md-8 pd2">
+      <h1>
+        Welcome {{name}} to MyLibrary!
+      </h1>
+  </div>
+    <div class="col-md-2 col-xs-1 pd">
+       <button class = "btn btn-secondary  "id="googleBtn" >Google Sign-In</button>
+      </div>
+</div>
